@@ -8,7 +8,7 @@
 
 plugins {
     // Apply the org.jetbrains.kotlin.jvm Plugin to add support for Kotlin.
-    id("org.jetbrains.kotlin.jvm") version "1.9.10"
+    id("org.jetbrains.kotlin.jvm") version "1.9.21"
 
     // Apply the application plugin to add support for building a CLI application in Java.
     application
@@ -29,7 +29,7 @@ testing {
         // Configure the built-in test suite
         val test by getting(JvmTestSuite::class) {
             // Use Kotlin Test test framework
-            useKotlinTest("1.9.10")
+            useKotlinTest("1.9.21")
         }
     }
 }

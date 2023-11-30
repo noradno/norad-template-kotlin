@@ -1,4 +1,3 @@
-# trigger dependabot
 version: 2
 updates:
   - package-ecosystem: gradle

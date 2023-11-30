@@ -19,13 +19,11 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter")
 }
 
-testing {
-    suites {
-        // Configure the built-in test suite
-        val test by getting(JvmTestSuite::class) {
-            // Use Kotlin Test test framework
-            useKotlinTest("1.9.21")
-        }
+tasks {
+    test {
+        useJUnitPlatform()
+        // https://phauer.com/2018/best-practices-unit-testing-kotlin/
+        systemProperty("junit.jupiter.testinstance.lifecycle.default", "per_class")
     }
 }
 
@@ -37,6 +35,5 @@ java {
 }
 
 application {
-    // Define the main class for the application.
     mainClass.set("no.norad.ApplicationKt")
 }

@@ -3,7 +3,7 @@
  */
 package no.norad
 
-class App {
+class Application {
     val greeting: String
         get() {
             return "Hello World!"
@@ -11,5 +11,5 @@ class App {
 }
 
 fun main() {
-    println(App().greeting)
+    println(Application().greeting)
 }

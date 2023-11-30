@@ -43,5 +43,5 @@ java {
 
 application {
     // Define the main class for the application.
-    mainClass.set("no.norad.AppKt")
+    mainClass.set("no.norad.ApplicationKt")
 }

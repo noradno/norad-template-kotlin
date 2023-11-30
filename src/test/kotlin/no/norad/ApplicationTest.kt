@@ -6,9 +6,9 @@ package no.norad
 import kotlin.test.Test
 import kotlin.test.assertNotNull
 
-class AppTest {
+class ApplicationTest {
     @Test fun appHasAGreeting() {
-        val classUnderTest = App()
+        val classUnderTest = Application()
         assertNotNull(classUnderTest.greeting, "app should have a greeting")
     }
 }

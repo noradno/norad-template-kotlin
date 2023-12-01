@@ -1,5 +1,7 @@
 # Template project for Kotlin
 
+![build status](https://github.com/noradno/norad-template-kotlin/actions/workflows/build.yml/badge.svg)
+
 This is a template repository for Kotlin-based projects at [Norad](https://www.norad.no/).
 
 ## Getting started

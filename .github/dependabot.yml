@@ -6,3 +6,9 @@ updates:
       interval: daily
     assignees:
       - "@noradno/dpg"
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: daily
+    assignees:
+      - "@noradno/dpg"

@@ -1,0 +1,33 @@
+name: Auto Merge dependabot
+on: pull_request_target
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+    if: github.actor == 'dependabot[bot]'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - name: Setup Gradle
+        uses: gradle/gradle-build-action@v2
+      - name: Run build with Gradle Wrapper
+        run: ./gradlew build
+
+  dependabot:
+    name: Merge
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: write
+    # Only allow dependabot from this repo and not via forks
+    if: github.actor == 'dependabot[bot]' && github.event.pull_request.head.repo.full_name == github.repository
+    steps:
+      - run: gh pr merge --auto --rebase "$PR_URL"
+        env:
+          PR_URL: ${{github.event.pull_request.html_url}}

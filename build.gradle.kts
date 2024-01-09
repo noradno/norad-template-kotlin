@@ -12,7 +12,7 @@ dependencies {
     implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
     implementation(kotlin("stdlib"))
     implementation("io.github.oshai:kotlin-logging-jvm:6.0.1")
-    implementation("org.slf4j:slf4j-api:2.0.10")
+    implementation("org.slf4j:slf4j-api:2.0.11")
     implementation("ch.qos.logback:logback-classic:1.4.14")
 
     testImplementation(platform("org.junit:junit-bom:5.10.1"))
